@@ -1,0 +1,14 @@
+{
+  "format": "nj-public-key-v1",
+  "keyId": "nj-970d76dfd1404fc5af5b09",
+  "publicJwk": {
+    "kty": "RSA",
+    "n": "1TBKKdtxGzwPKQvmyGTh5iVUM1DRGwxB6LvM96lob_2Yct2pj1ryUJdv06wPbjDGp89xPf596Nx_iV7dSRABTLgTx-C31zU8UjSWwSgX3hTnCyzKTKmu_4ab22UwPjQ_2yDr4e8HiNFDouc3X0Mequ4fSwQKIK0_m-Z1UtyxvAQr440s0suC1laa1HdbkRt6IiLcl-Qb0g567Hz07W1EB7d94dSgkTc0sqW11mwKSMlWCVB552zVEwYJ-_IP27o7ROu0DO0AGoLe6j_8qaogzwg6PnoPL9NV_KSBjb1hom20C2uXhTNP2zTwUADeF43x7mDS3WuAN3cG8kfD22TBh0UcEXgD5nGbcd_6TS2Mh_CznzKMzYn0qgFROuOZgsrr7SEwsh3PgpQrGxgAdq6Qr2icYlDasG4PmNDgi0NU0WIgHfKeLoI5rC_Sb3PN2myirkCB8yAMkTXIEF2QSmkzcIe-3UoGZgsOrcEM4ZI4HJF3pSGxqWAtDA0T3j9WV-2Z",
+    "e": "AQAB",
+    "alg": "RSA-OAEP-256",
+    "ext": true,
+    "key_ops": [
+      "encrypt"
+    ]
+  }
+}
