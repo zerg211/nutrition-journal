@@ -1,7 +1,7 @@
 {
   "format": "nj-sealed-v1",
   "keyId": "nj-970d76dfd1404fc5af5b09",
-  "updatedAt": "2026-11-01T12:23:14Z",
+  "updatedAt": "2026-11-01T13:35:00Z",
   "entries": [
     {
       "v": 1,
@@ -72,6 +72,13 @@
       "ek": "0_JydWKHfkgzI6wUX23PLx2YSogLILFf_euVXf9DUCRubnKFHG1bZUytZ24kZAjmsLtj9A5k2p0Y15WtGGBW6-oLJpPOAA7HN_W8GGejRaUawRd1z73Q-nT_VOJKz1aK2GqvHar3mt35e5DZEvRp1Yz4KKFxNKZ3iGAJMRLsmhXiZWAcjyxwVBcAzhddFWIn8fVDRqJriHHiOtzhX95WkUr0_aaNKzhqKITz9o8LEBYnF9leTdY8pvfX3VKQV1MSvREY4k9nO9_TXdwh6HXKJh5o3Ij2NKycQB13LLcTBa12ffxlR0HlOepoPaxoj5h4IHT_CAT_L0pnHfDiugHqodOoZsRCHfNHs8Si7WB_h0InGev4vK5He7nHKuSfixF19bGabzhpc3rIpD6TfNQldiOgQjn2wdp6BEst5jpGgJuJWYrduD9AIwyXFVnwY3ooTQeiUUZKKYT5N4QIfmAbrNXDSO8BBpEDndrJK-BPvYL5zshZx66YOsRhEIhZOliY",
       "iv": "mcmVhd61meKbpW7_",
       "ct": "xlkVXZbyQ9FwOLScZ3mxOckLBo7OfKrbULynRcXL7Kzlbv8nIoL_caCmqhb3QE807EfyGqS2ySDyRot3lRsj2oGmzdc2aAkckrW6j1Xk5ZfnoRYldDKmc47NmH9FfQLkT2Yc_D1KTeZhYtZOkAJ7FnaE_S4XLWLEWa0j7IKIpEnDRkD8ikpAApd25CZ_rFBTlQpHvJ0doAF-oMAQbIeyajBboOeYOsz5No5plj3MGLRi8_j70kzLONGM9m5APbl7BzMPHlJ_Le7dvgRiRIGAR0SeeQzOGW_OMw"
+    },
+    {
+      "v": 1,
+      "kid": "nj-970d76dfd1404fc5af5b09",
+      "ek": "U9GvqnAC2NLHBn1VLFhKf_fpUzklYH7fwXWd6mKiWnemxMC2t_w_GzaANiye6K9__wW9b6kClZTg_ievFea83zant6nV33Q0LDmR6gq-rJhuQ44ZG5Og11V-U4Q7EbCvjTuHWsWTcwELsEhR9S-zo3tUEYlm3YYVdrx0EDeMtGuYDMwK_GnfJxWgIjMUDo0WaGsrfxnlJ3q5CqorQhHqcBUDnXPHo3eVhqkNNfjKy_p2-76_0Y-EOoXdAia0koTVPl5BDH_Xex2k5j3Ia6dQkn7Z5WLgjQJ-s6cCk_xJXfet6i44fJ2kVCy--58y3k1aEcDBOVIdU6AIM7kRo8kYzk567sffVeW-EdEL_WAGlKYALHpmjlsQuU8jO4Scgz2ubIdC_TJdktJyG7l21SH-ddsrzfCfXefDXuQEAia8UJ6gTWEn32PV8fwJAdnGef0aXiwzUbcIr3RPQxMDu23a6UtPS_SfTJwUe1-kgW4MI28_9JuGYfYpg5Ha9z6jQsIU",
+      "iv": "75WjXQCYonygNg1I",
+      "ct": "_unLMVEbmCumFWv1D1qj2dK6vDWmGDwRBgHu6EpESWZ2glXYh-dKnddntwPBewHwOGSW2nc2rowo0QCPXHAAAhiTZHJXQlEWuzzU5n5AnWLA4ZfBfwnls_og46L0RV2SQz1gioAuy3d3hZzkrUNMGcXzBk2-bpybNRwxepMIWH7fBAqxdyl3r1H2BUMY5i4J5YD3vOoUn9-5SIfyxCWNDBAQsMpHF6yn7RVurKba-slDCTbXt_yFL_QcPeKQqdIGZoMuH06asF6ELuYYHFg8XwUdE70uRjaHXIQX525CCtM-zT8cDoZDYj-UC_ASyvL6TU4cKH4azPzNWyQiBUXttLbSstcJqZjZocAdCZ0xP91NkYc3CLvZ21QD"
     }
   ]
 }
