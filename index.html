@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f7f8">
+  <meta name="description" content="Личный дневник питания: цели и остатки калорий, БЖУ, история приёмов пищи и динамика веса.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://raw.githubusercontent.com; base-uri 'self'; form-action 'none'; object-src 'none'">
+  <title>Дневник питания</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">◉</span><span>Мой дневник</span></div>
+      <button class="icon-button" id="refresh-btn" title="Проверить новые записи" aria-label="Проверить новые записи">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14.5-4.7L3 9"/><path d="M3 4v5h5"/><path d="M4 13a8 8 0 0 0 14.5 4.7L21 15"/><path d="M21 20v-5h-5"/></svg>
+      </button>
+    </header>
+
+    <div class="headline">
+      <p class="eyebrow" id="current-date">Личный журнал питания</p>
+      <h1>Твой прогресс</h1>
+      <p class="subtle" id="status" aria-live="polite">Загружаем зашифрованный журнал…</p>
+    </div>
+
+    <section class="unlock" id="unlock" hidden aria-labelledby="unlock-title">
+      <div class="lock-symbol" aria-hidden="true">🔒</div>
+      <h2 id="unlock-title">Подключить дневник</h2>
+      <p>Данные о питании зашифрованы. Один раз выбери личный файл ключа, который получил в ChatGPT. Ключ не отправляется на сервер.</p>
+      <label for="key-input" class="primary-button">Выбрать файл ключа</label>
+      <input id="key-input" type="file" accept=".json,application/json" hidden>
+      <p class="small-muted" id="key-status">Ключ хранится только на этом устройстве.</p>
+    </section>
+
+    <main id="dashboard" hidden>
+      <div class="card-stack">
+        <section class="goal-card" aria-labelledby="day-title">
+          <div class="goal-header">
+            <h2 id="day-title">Дневная цель</h2>
+            <div class="hero-number"><span id="day-left">—</span><span class="hero-unit">ккал</span></div>
+            <p class="goal-subtitle" id="day-caption">Осталось на сегодня</p>
+          </div>
+          <div class="consumption-bar" role="progressbar" aria-label="Калории за день" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="day-progress"><div id="day-fill"></div></div>
+          <div class="progress-foot"><span id="day-eaten">Съедено: —</span><span id="day-total">План: —</span></div>
+          <div class="thin-rule"></div>
+          <div class="macro-grid">
+            <div class="macro"><span class="macro-name">Белки</span><strong id="day-p">—</strong><span class="macro-bar macro-green"><i id="day-p-fill"></i></span></div>
+            <div class="macro"><span class="macro-name">Жиры</span><strong id="day-f">—</strong><span class="macro-bar macro-amber"><i id="day-f-fill"></i></span></div>
+            <div class="macro"><span class="macro-name">Углеводы</span><strong id="day-c">—</strong><span class="macro-bar macro-blue"><i id="day-c-fill"></i></span></div>
+          </div>
+          <p class="macro-caption">Остаток БЖУ на сегодня</p>
+        </section>
+
+        <section class="goal-card" aria-labelledby="week-title">
+          <div class="goal-header">
+            <h2 id="week-title">Недельная цель</h2>
+            <div class="hero-number"><span id="week-left">—</span><span class="hero-unit">ккал</span></div>
+            <p class="goal-subtitle" id="week-caption">Осталось на неделю</p>
+            <p class="week-range" id="week-range">—</p>
+          </div>
+          <div class="consumption-bar" role="progressbar" aria-label="Калории за неделю" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="week-progress"><div id="week-fill"></div></div>
+          <div class="progress-foot"><span id="week-eaten">Съедено: —</span><span id="week-total">План: —</span></div>
+          <div class="thin-rule"></div>
+          <div class="macro-grid">
+            <div class="macro"><span class="macro-name">Белки</span><strong id="week-p">—</strong><span class="macro-bar macro-green"><i id="week-p-fill"></i></span></div>
+            <div class="macro"><span class="macro-name">Жиры</span><strong id="week-f">—</strong><span class="macro-bar macro-amber"><i id="week-f-fill"></i></span></div>
+            <div class="macro"><span class="macro-name">Углеводы</span><strong id="week-c">—</strong><span class="macro-bar macro-blue"><i id="week-c-fill"></i></span></div>
+          </div>
+          <p class="macro-caption">Остаток БЖУ на неделю</p>
+        </section>
+      </div>
+
+      <section class="history-section" aria-labelledby="history-title">
+        <div class="section-heading"><div><span class="eyebrow">Записи из чата</span><h2 id="history-title">Журнал питания</h2></div><span class="count-pill" id="meal-count">0</span></div>
+        <div id="meal-list" class="meal-list"></div>
+      </section>
+
+      <section class="weight-section" aria-labelledby="weight-title">
+        <div class="section-heading"><div><span class="eyebrow">Контроль результата</span><h2 id="weight-title">Вес</h2></div></div>
+        <div class="weight-card"><div><span class="small-muted">Последний вес</span><div class="weight-number"><strong id="current-weight">—</strong><span>кг</span></div></div><div class="weight-goal"><span class="small-muted">Цель</span><strong id="weight-goal">—</strong></div></div>
+        <div id="weight-history" class="weight-history"></div>
+      </section>
+    </main>
+
+    <footer class="footer"><span id="last-sync">Последняя проверка: —</span><button id="forget-key" class="text-button" hidden>Стереть ключ с устройства</button><p>Данные расшифровываются только на твоём устройстве. Записи обновляются после сохранения в GitHub.</p></footer>
+  </div>
+</body>
+</html>
